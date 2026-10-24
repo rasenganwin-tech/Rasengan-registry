@@ -1,0 +1,23 @@
+{
+  "name": "rasengan-registry-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for US public-registry change events: California contractor (CSLB) licence lookup, bond and workers' comp lapse events, licences expiring soon, and new FMCSA carriers with authority and insurance status.",
+  "mcpName": "io.github.rasenganwin-tech/rasengan-registry",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": { "rasengan-registry-mcp": "src/index.js" },
+  "files": ["src", "README.md", "LICENSE"],
+  "scripts": {
+    "start": "node src/index.js",
+    "start:http": "node src/index.js --http",
+    "check": "node --check src/index.js && node --check src/tools.js && node --check src/data.js"
+  },
+  "engines": { "node": ">=18" },
+  "keywords": ["mcp", "model-context-protocol", "cslb", "contractor-license", "fmcsa", "trucking", "surety", "insurance", "public-records"],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "express": "^5.1.0",
+    "zod": "^3.25.0"
+  }
+}

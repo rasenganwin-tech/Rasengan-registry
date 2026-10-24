@@ -1,0 +1,8 @@
+# Smithery config (stdio). No configuration or secrets are needed.
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties: {}
+  commandFunction: |-
+    (config) => ({ command: 'node', args: ['src/index.js'] })
